@@ -15,6 +15,9 @@ const lecturerRouter = require('./routes/v1/lecturer.route');
 const studentRouter = require('./routes/v1/student.route');
 const courseRouter = require('./routes/v1/course.route');
 const authRouter = require('./routes/v1/auth.route');
+const assignmentRouter = require('./routes/v1/assignment.route');
+const assignmentSubmissionRouter = require('./routes/v1/assignment.submission.route')
+
 
 
 const { errorConverter, errorHandler } = require('./middlewares/error');
@@ -62,7 +65,9 @@ app.use(lecturerRouter);
 app.use(studentRouter);
 app.use(courseRouter);
 app.use(authRouter);
-// app.use(studentRouter);
+app.use(assignmentRouter);
+app.use(assignmentSubmissionRouter);
+
 
 
 

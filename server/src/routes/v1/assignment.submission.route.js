@@ -22,6 +22,8 @@ const upload = multer({ storage: storage });
 router.post('/assignmentSubmission/create', upload.single('image'),assignmentSubmissionController.createAssignmentSubmission);
 // router.get('/assignmentSubmissions' , assignmentSubmissionController.getStudents);
 router.get('/assignmentSubmission/:id' , assignmentSubmissionController.getAssignmentSubmission);
+router.get('/assignmentSubmissionByAssignment/:id' , assignmentSubmissionController.getAssignmentSubmissionsByAssignmentId);
+
 
 
 module.exports = router;
